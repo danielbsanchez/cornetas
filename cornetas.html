@@ -1,0 +1,286 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Sorteio de Times</title>
+    <style>
+
+    .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    }
+
+    .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    }
+
+    .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    }
+
+    .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+
+    .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    }
+
+    .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+
+    .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    }
+
+    .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    }
+
+    .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    }
+
+    .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    }
+
+    .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    }
+
+    .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    }
+
+    .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    }
+
+    .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    }
+
+    .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    }
+
+    .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    }
+
+    .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    }
+
+
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            font-family: "Poppins", sans-serif;
+            background: rgb(0,0,0);
+            background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(255,220,14,1) 50%);
+        }
+        textarea { width: 300px; height: 100px; margin-bottom: 10px; }
+        .teams { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
+        .team { border: 1px solid #000; padding: 10px; width: 150px; }
+
+        h2 {
+            color: #fff;
+            text-shadow: 1px 1px 2px #000;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 60px;
+        }
+
+        p.atletas {
+            color: #fff;
+            background: #00000078;
+            width: fit-content;
+            margin: 0 auto 10px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        div.amarelo {
+            border: 1px solid #ffdc0e;
+            color: #ffdc0e;
+        }
+
+        div.preto {
+            border: 1px solid #000;
+            color: #000;
+        }
+
+        .groups-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    p.group-title {
+        font-size: 17px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #000;
+        background: #fff;
+        width: fit-content;
+        margin: 20px 0 0;
+        padding: 8px 10px 5px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    textarea {
+        width: 300px;
+        height: 100px;
+        margin-bottom: 10px;
+        border: 3px solid #fff;
+        background: #000000ad;
+        color: #fff;
+        border-radius: 0 6px 6px 6px;
+        box-shadow: 5px 5px 10px #0000002b;
+        padding: 20px;
+        box-sizing: border-box;
+        outline:0;
+    }
+
+    button {
+        width: 400px;
+        padding: 15px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: 'Poppins';
+        background: #fff;
+        border: 0;
+        box-shadow: 5px 5px 0 #000;
+        transition: 0.2s linear all;
+        cursor: pointer;
+        margin: 16px 0 16px;
+    }
+
+    button:hover{
+        background:#e8e8e8;
+    }
+    </style>
+    </head>
+    <body>
+
+    <h2>Sorteio de Times</h2>
+    <p class="atletas">Insira os nomes dos atletas separados pelos grupos</p>
+
+    <div class="groups-box">
+        <div class="group-box-item">
+    <p class="group-title">Grupo 1</p>
+    <textarea id="levelS" placeholder="Digite os nomes aqui..."></textarea><br>
+    </div>
+
+    <div class="group-box-item">
+    <p class="group-title">Grupo 2</p>
+    <textarea id="levelA" placeholder="Digite os nomes aqui..."></textarea><br>
+    </div>
+
+    <div class="group-box-item">
+    <p class="group-title">Grupo 3</p>
+    <textarea id="levelB" placeholder="Digite os nomes aqui..."></textarea><br>
+    </div>
+    </div>
+    <button onclick="sortTeams()">Sortear</button>
+
+    <div class="teams">
+        <div class="team amarelo" id="team1"><h3>Time Amarelo</h3></div>
+        <div class="team preto" id="team2"><h3>Time Preto</h3></div>
+    </div>
+
+    <script>
+        function sortTeams() {
+            let players = [];
+            
+            function addPlayers(level, rank) {
+                let input = document.getElementById(level).value.trim();
+                if (input) {
+                    input.split("\n").forEach(name => {
+                        players.push({ name: name.trim(), rank });
+                    });
+                }
+            }
+            
+            addPlayers("levelS", "1");
+            addPlayers("levelA", "2");
+            addPlayers("levelB", "3");
+            
+            if (players.length === 0) return alert("Insira pelo menos um atleta.");
+            
+            let grouped = players.reduce((acc, p) => {
+                acc[p.rank] = acc[p.rank] || [];
+                acc[p.rank].push(p);
+                return acc;
+            }, {});
+            
+            let team1 = [], team2 = [];
+            Object.values(grouped).forEach(group => {
+                let shuffled = group.sort(() => Math.random() - 0.5);
+                shuffled.forEach(player => {
+                    if (team1.length <= team2.length) {
+                        team1.push(player);
+                    } else {
+                        team2.push(player);
+                    }
+                });
+            });
+            
+            document.getElementById("team1").innerHTML = `<h3>Time Amarelo</h3>${team1.map(p => `<p>${p.name} (${p.rank})</p>`).join('')}`;
+            document.getElementById("team2").innerHTML = `<h3>Time Preto</h3>${team2.map(p => `<p>${p.name} (${p.rank})</p>`).join('')}`;
+        }
+    </script>
+    </body>
+    </html>
